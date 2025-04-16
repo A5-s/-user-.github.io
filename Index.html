@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4slgy Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298, #1e847f, #159957, #283c86);
+      background-size: 1000% 1000%;
+      animation: waveGradient 30s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @keyframes waveGradient {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    header nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 10vh;
+    }
+
+    .typewriter h1 {
+      font-size: 48px;
+      overflow: hidden;
+      border-right: .15em solid #59aaff;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .1em;
+      animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #59aaff; }
+    }
+
+    .hero h2 {
+      font-size: 64px;
+      font-weight: 900;
+      color: #59aaff;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    .tags {
+      margin-top: 20px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background-color: #3498db;
+      padding: 6px 14px;
+      margin: 4px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%;
+    }
+
+    .footer-icons {
+      margin-top: 10px;
+    }
+
+    .footer-icons a {
+      margin: 0 10px;
+      display: inline-block;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <h1>mtdev</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="typewriter">
+      <h1>Hey, I'm 4slgy!</h1>
+    </div>
+    <h2>Let's develop</h2>
+    <p>Let's work together and do something <strong>incredible</strong>?</p>
+    <div class="tags">
+      <span>Unity</span>
+      <span>Unreal</span>
+      <span>Godot</span>
+      <span>C#</span>
+      <span>Python</span>
+      <span>Lua,Roblox</span>
+    </div>
+  </section>
+
+  <footer>
+    <div><strong>Quick Links</strong></div>
+    <div class="footer-icons">
+      <a href="#"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fas fa-image"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 4slgy. All rights reserved.</p>
+  </footer>
+</body>
+</html>
