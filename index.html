@@ -81,10 +81,12 @@
       50% { border-color: #59aaff; }
     }
 
-    .hero h2 {
+    #dynamic-text {
       font-size: 64px;
       font-weight: 900;
       color: #59aaff;
+      margin-top: 20px;
+      height: 80px;
     }
 
     .hero p {
@@ -139,7 +141,7 @@
     <div class="typewriter">
       <h1>Hey, I'm 4slgy!</h1>
     </div>
-    <h2>Let's develop</h2>
+    <h2 id="dynamic-text"></h2>
     <p>Let's work together and do something <strong>incredible</strong>?</p>
     <div class="tags">
       <span>Unity</span>
@@ -160,5 +162,42 @@
     </div>
     <p>&copy; 2025 4slgy. All rights reserved.</p>
   </footer>
+
+  <script>
+    const phrases = [
+      "Let's develop",
+      "Let's create",
+      "Let's innovate",
+      "Let's build something great",
+      "Let's shape the future"
+    ];
+    
+    const el = document.getElementById('dynamic-text');
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentPhrase = phrases[phraseIndex];
+      if (isDeleting) {
+        el.textContent = currentPhrase.substring(0, charIndex--);
+        if (charIndex < 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+      } else {
+        el.textContent = currentPhrase.substring(0, charIndex++);
+        if (charIndex > currentPhrase.length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1000); // pause before deleting
+          return;
+        }
+      }
+      setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+
+    typeEffect();
+  </script>
 </body>
 </html>
+
